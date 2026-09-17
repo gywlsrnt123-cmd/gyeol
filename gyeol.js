@@ -256,7 +256,7 @@ if (addCart) {
         let cartCount = Number(localStorage.getItem('cartCount')) || 0;
         cartCount++;
         localStorage.setItem('cartCount', cartCount);
-        window.location.href = 'gyeol-main.html';
+        window.location.href = 'index.html';
     });
 }
 // 장바구니 숫자 표시
