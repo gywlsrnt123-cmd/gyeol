@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYEOL 메인 페이지</title>
+    <link rel="stylesheet" href="gyeol.css">
+    <!-- Pretendard -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Spectral + Noto Serif KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!--swiper-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div id="header-bottom">
+            <button type="button" id="menu-btn"><img src="Tablet/list.svg" alt="목록" class="tablet-menu-icon"></button>
+            <h1><a href="gyeol-main.html"><img src="Mobile/source/typo_f2eee7.png" alt="gyeol" width="94" class="tablet-logo"></a></h1>
+            <div class="h-icon">
+                <a href="#"><img src="Tablet/search.svg" alt="검색" class="tablet-search-icon"></a>
+                <a href="#"><img src="Tablet/mypage.svg" alt="마이페이지" class="tablet-mypage-icon"></a>
+                <a href="#" class="mobile-cart" data-count="0"><img src="Tablet/cart.svg" alt="장바구니" class="tablet-cart-icon"></a>
+            </div>
+        </div>
+        <div id="header-desktop">
+            <ul class="gnb-desktop en">
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">BEST</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">CUSTOM</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+            <h1><a href="gyeol-main.html"><img src="Desktop/typo_f2eee7.png" alt="gyeol" width="145" class="desktop-logo"></a></h1>
+            <div class="desktop-right">
+                <form method="get" id="search-box">
+                    <input type="search" maxlength="20" id="u-search" name="u-search">
+                    <button type="submit">
+                        <img src="Desktop/search-w.svg" alt="검색" class="desktop-search-icon">
+                    </button>
+                </form>
+                <ul class="util-menu-desktop en">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#" class="cart-count" data-count="0">CART</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hero-slide">
+                        <img src="Desktop/main-banner.png" alt="커스텀 향수">
+                    </div>
+                    <div class="swiper-slide hero-slide">
+                        <img src="Desktop/main-banner.png" alt="이미지 변경">
+                    </div>
+                    <div class="swiper-slide hero-slide">
+                        <img src="Desktop/main-banner.png" alt="이미지 변경">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="custom-cta">
+            <img src="Desktop/curtain.png" alt="커튼">
+            <h2 class="en">Find your Scent</h2>
+            <p class="serif-ko">
+                <span class="en">GYEOL</span>
+                은 자신의 취향에 맞는 향을 발견하고,
+                <br class="pc-br">
+                <br class="tablet-br mobile-br">
+                원하는 향을 직접 조합하여
+                <br class="pc-br">
+                <br class="tablet-br mobile-br">
+                자신만의 결을 향으로 완성할 수 있는
+                <br class="tablet-br mobile-br">
+                향수 경험을 제공합니다.
+            </p>
+            <p class="line-w"></p>
+            <p class="serif-ko">
+                당신의 취향을 따라
+                <br class="pc-br">
+                <br class="tablet-br mobile-br">
+                나만의 향을 완성해보세요.
+            </p>
+            <a href="gyeol-product-page.html" class="btn-create en">CREATE NOW</a>
+        </section>
+        <section id="best">
+            <div class="best-inner">
+                <h2 class="en">Best Seller</h2>
+                <p class="explain">
+                    <span class="en">GYEOL</span>만의 시그니처 향을 만나보세요
+                </p>
+                <div class="swiper best-swiper">
+                    <ul class="swiper-wrapper best-list">
+                        <li class="swiper-slide best-slide">
+                            <a href="#">
+                                <img src="Desktop/best.png" alt="이미지 변경">
+                                <p class="perfume-name en">FRAGMENT</p>
+                                <ul class="perfume-note en">
+                                    <li>Herbal</li>
+                                    <li>Woody</li>
+                                    <li>Amber</li>
+                                </ul>
+                                <p class="perfume-desc">새벽 이슬을 머금은 허브의 
+                                맑고
+                                <br>
+                                차분한 향</p>
+                                <p class="best-view">View Detail <img src="Desktop/Union.svg" alt=""></p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide best-slide">
+                            <a href="#">
+                                <img src="Desktop/best.png" alt="이미지 변경">
+                                <p class="perfume-name en">MOMENT</p>
+                                <ul class="perfume-note en">
+                                    <li>Green</li>
+                                    <li>Citrus</li>
+                                    <li>Floral</li>
+                                </ul>
+                                <p class="perfume-desc">
+                                    찰나의 싱그러움이 일상에
+                                    <br>
+                                    스며드는 향</p>
+                                <p class="best-view">View Detail <img src="Desktop/Union.svg" alt=""></p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide best-slide">
+                            <a href="#">
+                                <img src="Desktop/best.png" alt="이미지 변경">
+                                <p class="perfume-name en">VEIL</p>
+                                <ul class="perfume-note en">
+                                    <li>Powdery</li>
+                                    <li>Floral</li>
+                                    <li>Musk</li>
+                                </ul>
+                                <p class="perfume-desc">깨끗한 파우더의 결이 부드럽게<br>흐르는 향</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="note">
+            <h2 class="en">Explore Notes</h2>
+            <p class="explain">다양한 노트를 탐색하고 나만의 향을 완성해보세요</p>
+            <div class="swiper note-swiper">
+                <ul class="swiper-wrapper note-list">
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/citrus.png" alt="시트러스">
+                            <div class="note-typo">
+                                <p class="note-name en">Citrus</p>
+                                <p class="note-kr">시트러스</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/green.png" alt="그린">
+                            <div class="note-typo">
+                                <p class="note-name en">Green</p>
+                                <p class="note-kr">그린</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                        <img src="Desktop/floral.png" alt="플로럴">
+                        <div class="note-typo">
+                            <p class="note-name en">Floral</p>
+                            <p class="note-kr">플로럴</p>
+                        </div> 
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/musk.png" alt="머스크">
+                            <div class="note-typo">
+                                <p class="note-name en">Musk</p>
+                                <p class="note-kr">머스크</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                             </span>
+                        </a>
+                   </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/woody.png" alt="우디">
+                            <div class="note-typo">
+                                <p class="note-name en">Woody</p>
+                                <p class="note-kr">우디</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/fruity.png" alt="프루티">
+                            <div class="note-typo">
+                                <p class="note-name en">Fruity</p>
+                                <p class="note-kr">프루티</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/spicy.png" alt="스파이시">
+                            <div class="note-typo">
+                                <p class="note-name en">Spicy</p>
+                                <p class="note-kr">스파이시</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/powdery.png" alt="파우더리">
+                            <div class="note-typo">
+                                <p class="note-name en">Powdery</p>
+                                <p class="note-kr">파우더리</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/aquatic.png" alt="아쿠아틱">
+                            <div class="note-typo">
+                                <p class="note-name en">Aquatic</p>
+                                <p class="note-kr">아쿠아틱</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/amber.png" alt="앰버">
+                            <div class="note-typo">
+                                <p class="note-name en">Amber</p>
+                                <p class="note-kr">앰버</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide note-slide">
+                        <a href="#">
+                            <img src="Desktop/herbal.png" alt="허브">
+                            <div class="note-typo">
+                                <p class="note-name en">Herbal</p>
+                                <p class="note-kr">허브</p>
+                            </div>
+                            <span class="note-btn">
+                                <img src="Mobile/source/note_button.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="summer-scent">
+            <div class="summer-feature">
+                <div class="summer-visual">
+                    <img src="Desktop/summer.png" alt="">
+                    <div class="summer-text">
+                        <p class="tit en">For Your Summer</p>
+                        <p class="desktop-summer-desc serif-ko">바람을 머금은 그린 노트와<br>은은한 시트러스 계절의 결을 담은<br>여름의 향을 바로 만나보세요.</p>
+                        <p class="summer-desc serif-ko">바람을 머금은 그린 노트와 은은한<br> 시트러스 계절의 결을 담은 여름의 향</p>
+                    </div>
+                </div>
+                <div class="desktop-summer-perfume">
+                    <a href="#">
+                        <img src="Desktop/best.png" alt="이미지 변경">
+                        <p class="desktop-perfume-name en">DEW</p>
+                        <ul class="desktop-perfume-note en">
+                            <li>Green</li>
+                            <li>Tea</li>
+                            <li>Fig</li>
+                        </ul>
+                        <p class="desktop-perfume-desc">새벽 이슬을 머금은 허브의 맑고<br class="pc-br">차분한 향</p>
+                        <p class="desktop-best-view">View Detail <img src="Desktop/Union.svg" alt=""></p>
+                    </a>
+                </div>
+            </div>
+            <div class="summer-perfume">
+                <p class="all">
+                    <a href="#">
+                        view all
+                    </a>    
+                </p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="Desktop/best.png" alt="이미지 변경">
+                            <h2 class="perfume-name-left en">DEW</h2>
+                            <ul class="perfume-note-left en">
+                                <li>Green</li>
+                                <li>Tea</li>
+                                <li>Fig</li>
+                            </ul>
+                            <p class="perfume-price">58,000<span class="won en">WON</span></p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="Desktop/best.png" alt="이미지 변경">
+                            <h2 class="perfume-name-left en">BREATH</h2>
+                            <ul class="perfume-note-left en">
+                                <li>Marine</li>
+                                <li>Citrus</li>
+                                <li>Neroli</li>
+                            </ul>
+                            <p class="perfume-price">58,000<span class="won en">WON</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="brand-typo">
+            <article class="brand-typo-inner">
+                <p class="en">Complete your story with...</p>
+                <img src="Mobile/source/typo_E0D4C7.png" alt="">
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-copy">
+                <img src="logo_mockup/logo_design/logo/label_4c381e.png" alt="gyeol">
+                <p>Copyright © <span>GYEOL</span> All rights reserved</p>
+                <p>Seoul, South Korea</p>
+            </div>
+            <div class="footer-menu">
+                <p class="en">
+                    <a href="gyeol-brand-story.html">BRAND STORY</a>
+                </p>
+                <p class="en">
+                    <a href="#">SITE MAP</a>
+                </p>
+                <div class="footer-sns">
+                    <p class="en">FOLLOW US</p>
+                    <a href="#">
+                        <img src="Mobile/source/instagram.png" alt="인스타그램">
+                    </a>
+                    <a href="#">
+                        <img src="Mobile/source/kakaotalk.png" alt="카카오톡">
+                    </a>
+                </div>
+            </div>
+            <p class="line-h"></p>
+            <div class="footer-contact">
+                <ul>
+                    <li><a href="#">서비스 이용약관</a></li>
+                    <li class="privacy"><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용안내</a></li>
+                </ul>
+                <p>고객센터 1234-1234</p>
+                <p>상담가능 시간: 09:00 - 18:00
+                    <span>(주말, 공휴일 휴무)</span>
+                </p>
+                <p>마케팅 문의: gyeol@gyeol.kr</p>
+            </div>
+            
+        </div>
+        <div class="tablet-copy">
+                <p>Copyright © <span>GYEOL</span> All rights reserved</p>
+                <p>Seoul, South Korea</p>
+        </div>
+    </footer>
+    <div id="mobile-menu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-top en">
+                <p><a href="#">Login</a> | <a href="#">Help</a></p>
+                <button type="button" id="close-btn">
+                    <img src="Tablet/X.svg" alt="닫기">
+                </button>
+            </div>
+            <nav>
+                <ul class="en">
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#">BEST</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">CUSTOM</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="gyeol.js"></script>
+</body>
+</html>

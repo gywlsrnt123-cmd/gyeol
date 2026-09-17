@@ -1,0 +1,11 @@
+# OS/editor metadata
+.DS_Store
+._*
+Thumbs.db
+.vscode/
+.idea/
+
+# Design source files are not required by the website
+logo_mockup/mockup/
+*.ai
+*.psd

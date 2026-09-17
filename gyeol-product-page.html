@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYEOL 상품 페이지</title>
+    <link rel="stylesheet" href="gyeol.css">
+    <!-- Pretendard -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Spectral + Noto Serif KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!--swiper-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body id="product-page" class="custom-product">
+    <header>
+        <div id="header-bottom">
+            <button type="button" id="menu-btn"><img src="Tablet/list-b.svg" alt="목록" class="tablet-menu-icon"></button>
+            <h1><a href="gyeol-main.html"><img src="Mobile/source/typo_4C381E.png" alt="gyeol" width="94" class="tablet-logo"></a></h1>
+            <div class="h-icon">
+                <a href="#"><img src="Tablet/search-b.svg" alt="검색" class="tablet-search-icon"></a>
+                <a href="#"><img src="Tablet/mypage-b.svg" alt="마이페이지" class="tablet-mypage-icon"></a>
+                <a href="#" class="mobile-cart" data-count="0"><img src="Tablet/cart-b.svg" alt="장바구니" class="tablet-cart-icon"></a>
+            </div>
+        </div>
+        <div id="header-desktop">
+            <ul class="gnb-desktop en">
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">BEST</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">CUSTOM</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+            <h1><a href="gyeol-main.html"><img src="Desktop/typo_4C381E.png" alt="gyeol" width="145" class="desktop-logo"></a></h1>
+            <div class="desktop-right">
+                <form method="get" id="search-box">
+                    <input type="search" maxlength="20" id="u-search" name="u-search">
+                    <button type="submit">
+                        <img src="Desktop/search-b.svg" alt="검색" class="desktop-search-icon">
+                    </button>
+                </form>
+                <ul class="util-menu-desktop en">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#" class="cart-count" data-count="0">CART</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="custom-layout">
+        <section id="custom-page">
+            <div class="custom-typo en">
+                <p>Custom perfume</p>
+                <h2>Create Your Scent</h2>
+                <p class="custom-explain serif-ko">향을 직접 조합해<br>나만의 향수를 만들어 보세요.</p>
+            </div>
+            <div class="custom-img">
+                <img src="Desktop/mockup7.png" alt="향수제작이미지">
+            </div>
+        </section>
+        <section id="scent-custom">
+            <form method="post" id="custom-question" action="gyeol-result-page.html">
+                <div class="custom-name">
+                    <span class="custom-num en">01</span>
+                    <div class="name-title">
+                        <label for="per-name" class="en">FRAGRANCE NAME</label>
+                        <span class="required-text">필수</span>
+                    </div>
+                    <textarea id="per-name" name="per-name" maxlength="10" placeholder="향수 이름을 입력해주세요." required></textarea>
+                    <span class="text-count">0 / 10</span>
+                </div>
+                <div class="note-item top-note">
+                    <span class="custom-num en">02</span>
+                    <h3 class="en">TOP NOTE</h3>
+                    <p class="serif-ko">향수의 첫인상을 결정하는 노트</p>
+                    <button type="button" class="scent-note-btn">
+                        <span>향을 선택해주세요.</span>
+                        <img src="Tablet/arrow_down.svg" alt="">
+                    </button>
+                    <div class="scent-note-list">
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Citrus</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="top-note" value="Bergamot">
+                                    Bergamot
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Lemon">
+                                    Lemon
+                                </label>
+                                <label>
+                                    <input type="radio" name="top-note" value="Orange">
+                                    Orange
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Grapefruit">
+                                    Grapefruit
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Mandarin">
+                                    Mandarin
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Lime">
+                                    Lime
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Yuzu">
+                                    Yuzu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Green</span>
+                                <img src="Tablet/arrow_next.svg" alt=""></button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="top-note" value="mint">
+                                    Mint
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="basil">
+                                    Basil
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="tea-leaf">
+                                    Tea Leaf
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Bamboo">
+                                    Bamboo
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Green Grass">
+                                    Green Grass
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Fig Leaf">
+                                    Fig Leaf
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Violet Leaf">
+                                    Violet Leaf
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Floral</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="top-note" value="rose">
+                                    Rose
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="jasmine">
+                                    Jasmine
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="pansy">
+                                    Pansy
+                                </label>
+                                <label>
+                                    <input type="radio" name="top-note" value="Lavender">
+                                    Lavender
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Peony">
+                                    Peony
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Freesia">
+                                    Freesia
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Neroli">
+                                    Neroli
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Woody</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="top-note" value="cedarwood">
+                                    Cedarwood
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="sandalwood">
+                                    Sandalwood
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Vetiver">
+                                    Vetiver
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Patchouli">
+                                    Patchouli
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Oakwood">
+                                    Oakwood
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Guaiac Wood">
+                                    Guaiac Wood
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Hinoki">
+                                    Hinoki
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Musk</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="top-note" value="White Musk">
+                                    White Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Clean Musk">
+                                    Clean Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Powdery Musk">
+                                    Powdery Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Cotton Musk">
+                                    Cotton Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Skin Musk">
+                                    Skin Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Ambrette">
+                                    Ambrette
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Cashmere Musk">
+                                    Cashmere Musk
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Spicy</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="top-note" value="Black Pepper">
+                                    Black Pepper
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Pink Pepper">
+                                   Pink Pepper 
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Cardamom">
+                                    Cardamom
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Cinnamon">
+                                    Cinnamon
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Clove">
+                                    Clove
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Ginger">
+                                    Ginger
+                                </label>
+                                <label>
+                                <input type="radio" name="top-note" value="Nutmeg">
+                                    Nutmeg
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-item middle-note">
+                    <span class="custom-num en">03</span>
+                    <h3 class="en">MIDDLE NOTE</h3>
+                    <p class="serif-ko">향의 중심을 이루는 메인 향</p>
+                    <button type="button" class="scent-note-btn">
+                        <span>향을 선택해주세요.</span>
+                        <img src="Tablet/arrow_down.svg" alt="">
+                    </button>
+                    <div class="scent-note-list">
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Citrus</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="middle-note" value="Bergamot">
+                                    Bergamot
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Lemon">
+                                    Lemon
+                                </label>
+                                <label>
+                                    <input type="radio" name="middle-note" value="Orange">
+                                    Orange
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Grapefruit">
+                                    Grapefruit
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Mandarin">
+                                    Mandarin
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Lime">
+                                    Lime
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Yuzu">
+                                    Yuzu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Green</span>
+                                <img src="Tablet/arrow_next.svg" alt=""></button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="middle-note" value="mint">
+                                    Mint
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="basil">
+                                    Basil
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="tea-leaf">
+                                    Tea Leaf
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Bamboo">
+                                    Bamboo
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Green Grass">
+                                    Green Grass
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Fig Leaf">
+                                    Fig Leaf
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Violet Leaf">
+                                    Violet Leaf
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Floral</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="middle-note" value="rose">
+                                    Rose
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="jasmine">
+                                    Jasmine
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="pansy">
+                                    Pansy
+                                </label>
+                                <label>
+                                    <input type="radio" name="middle-note" value="Lavender">
+                                    Lavender
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Peony">
+                                    Peony
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Freesia">
+                                    Freesia
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Neroli">
+                                    Neroli
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Woody</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="middle-note" value="cedarwood">
+                                    Cedarwood
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="sandalwood">
+                                    Sandalwood
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Vetiver">
+                                    Vetiver
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Patchouli">
+                                    Patchouli
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Oakwood">
+                                    Oakwood
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Guaiac Wood">
+                                    Guaiac Wood
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Hinoki">
+                                    Hinoki
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Musk</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="middle-note" value="White Musk">
+                                    White Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Clean Musk">
+                                    Clean Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Powdery Musk">
+                                    Powdery Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Cotton Musk">
+                                    Cotton Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Skin Musk">
+                                    Skin Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Ambrette">
+                                    Ambrette
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Cashmere Musk">
+                                    Cashmere Musk
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Spicy</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="middle-note" value="Black Pepper">
+                                    Black Pepper
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Pink Pepper">
+                                   Pink Pepper 
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Cardamom">
+                                    Cardamom
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Cinnamon">
+                                    Cinnamon
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Clove">
+                                    Clove
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Ginger">
+                                    Ginger
+                                </label>
+                                <label>
+                                <input type="radio" name="middle-note" value="Nutmeg">
+                                    Nutmeg
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-item base-note">
+                    <span class="custom-num en">04</span>
+                    <h3 class="en">BASE NOTE</h3>
+                    <p class="serif-ko">오래도록 남는 깊은 잔향</p>
+                    <button type="button" class="scent-note-btn">
+                        <span>향을 선택해주세요.</span>
+                        <img src="Tablet/arrow_down.svg" alt="">
+                    </button>
+                    <div class="scent-note-list">
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Citrus</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="base-note" value="Bergamot">
+                                    Bergamot
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Lemon">
+                                    Lemon
+                                </label>
+                                <label>
+                                    <input type="radio" name="base-note" value="Orange">
+                                    Orange
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Grapefruit">
+                                    Grapefruit
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Mandarin">
+                                    Mandarin
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Lime">
+                                    Lime
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Yuzu">
+                                    Yuzu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Green</span>
+                                <img src="Tablet/arrow_next.svg" alt=""></button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="base-note" value="mint">
+                                    Mint
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="basil">
+                                    Basil
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="tea-leaf">
+                                    Tea Leaf
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Bamboo">
+                                    Bamboo
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Green Grass">
+                                    Green Grass
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Fig Leaf">
+                                    Fig Leaf
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Violet Leaf">
+                                    Violet Leaf
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Floral</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="base-note" value="rose">
+                                    Rose
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="jasmine">
+                                    Jasmine
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="pansy">
+                                    Pansy
+                                </label>
+                                <label>
+                                    <input type="radio" name="base-note" value="Lavender">
+                                    Lavender
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Peony">
+                                    Peony
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Freesia">
+                                    Freesia
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Neroli">
+                                    Neroli
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Woody</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="base-note" value="cedarwood">
+                                    Cedarwood
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="sandalwood">
+                                    Sandalwood
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Vetiver">
+                                    Vetiver
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Patchouli">
+                                    Patchouli
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Oakwood">
+                                    Oakwood
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Guaiac Wood">
+                                    Guaiac Wood
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Hinoki">
+                                    Hinoki
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Musk</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="base-note" value="White Musk">
+                                    White Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Clean Musk">
+                                    Clean Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Powdery Musk">
+                                    Powdery Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Cotton Musk">
+                                    Cotton Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Skin Musk">
+                                    Skin Musk
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Ambrette">
+                                    Ambrette
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Cashmere Musk">
+                                    Cashmere Musk
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note-category">
+                            <button type="button" class="category-btn en">
+                                <span>Spicy</span>
+                                <img src="Tablet/arrow_next.svg" alt="">
+                            </button>
+                            <div class="detail-list">
+                                <label>
+                                <input type="radio" name="base-note" value="Black Pepper">
+                                    Black Pepper
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Pink Pepper">
+                                   Pink Pepper 
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Cardamom">
+                                    Cardamom
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Cinnamon">
+                                    Cinnamon
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Clove">
+                                    Clove
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Ginger">
+                                    Ginger
+                                </label>
+                                <label>
+                                <input type="radio" name="base-note" value="Nutmeg">
+                                    Nutmeg
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-request">
+                    <span class="custom-num en">05</span>
+                    <div class="name-title">
+                        <label for="u-request" class="serif-ko">요청사항</label>
+                        <span class="select-text">(선택)</span>
+                    </div>
+                    <textarea name="u-request" id="u-request" maxlength="200" placeholder="예) 포근한 느낌, 피그 향을 더 많이 넣어주세요 등"></textarea>
+                    <span class="text-count">0 / 200</span>
+                </div>
+                <button type="submit" class="crt-brn en">
+                    CREATE MY SCENT
+                </button>
+            </form>
+        </section>     
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-copy">
+                <img src="logo_mockup/logo_design/logo/label_4c381e.png" alt="gyeol">
+                <p>Copyright © <span>GYEOL</span> All rights reserved</p>
+                <p>Seoul, South Korea</p>
+            </div>
+            <div class="footer-menu">
+                <p class="en">
+                    <a href="gyeol-brand-story.html">BRAND STORY</a>
+                </p>
+                <p class="en">
+                    <a href="#">SITE MAP</a>
+                </p>
+                <div class="footer-sns">
+                    <p class="en">FOLLOW US</p>
+                    <a href="#">
+                        <img src="Mobile/source/instagram.png" alt="인스타그램">
+                    </a>
+                    <a href="#">
+                        <img src="Mobile/source/kakaotalk.png" alt="카카오톡">
+                    </a>
+                </div>
+            </div>
+            <p class="line-h"></p>
+            <div class="footer-contact">
+                <ul>
+                    <li><a href="#">서비스 이용약관</a></li>
+                    <li class="privacy"><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용안내</a></li>
+                </ul>
+                <p>고객센터 1234-1234</p>
+                <p>상담가능 시간: 09:00 - 18:00
+                    <span>(주말, 공휴일 휴무)</span>
+                </p>
+                <p>마케팅 문의: gyeol@gyeol.kr</p>
+            </div>
+            
+        </div>
+        <div class="tablet-copy">
+                <p>Copyright © <span>GYEOL</span> All rights reserved</p>
+                <p>Seoul, South Korea</p>
+        </div>
+    </footer>
+    <div id="mobile-menu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-top en">
+                <p><a href="#">Login</a> | <a href="#">Help</a></p>
+                <button type="button" id="close-btn">
+                    <img src="Tablet/X.svg" alt="닫기">
+                </button>
+            </div>
+            <nav>
+                <ul class="en">
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#">BEST</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">CUSTOM</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="gyeol.js"></script>
+</body>
+</html>

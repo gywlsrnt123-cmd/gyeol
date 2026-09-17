@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYEOL 결과 페이지</title>
+    <link rel="stylesheet" href="gyeol.css">
+    <!-- Pretendard -->
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Spectral + Noto Serif KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!--swiper-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body id="product-page" class="result-product">
+    <header>
+        <div id="header-bottom">
+            <button type="button" id="menu-btn"><img src="Tablet/list-b.svg" alt="목록" class="tablet-menu-icon"></button>
+            <h1><a href="gyeol-main.html"><img src="Mobile/source/typo_4C381E.png" alt="gyeol" width="94" class="tablet-logo"></a></h1>
+            <div class="h-icon">
+                <a href="#"><img src="Tablet/search-b.svg" alt="검색" class="tablet-search-icon"></a>
+                <a href="#"><img src="Tablet/mypage-b.svg" alt="마이페이지" class="tablet-mypage-icon"></a>
+                <a href="#" class="mobile-cart" data-count="0"><img src="Tablet/cart-b.svg" alt="장바구니" class="tablet-cart-icon"></a>
+            </div>
+        </div>
+        <div id="header-desktop">
+            <ul class="gnb-desktop en">
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">BEST</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">CUSTOM</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+            <h1><a href="gyeol-main.html"><img src="Desktop/typo_4C381E.png" alt="gyeol" width="145" class="desktop-logo"></a></h1>
+            <div class="desktop-right">
+                <form method="get" id="search-box">
+                    <input type="search" maxlength="20" id="u-search" name="u-search">
+                    <button type="submit">
+                        <img src="Desktop/search-b.svg" alt="검색" class="desktop-search-icon">
+                    </button>
+                </form>
+                <ul class="util-menu-desktop en">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#" class="cart-count" data-count="0">CART</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="result-page">
+            <div class="result-typo">
+                <p class="result-label en">Your Scent</p>
+                <h2 class="serif-ko">
+                    OO님의 향이 완성되었어요.
+                </h2>
+                <p class="result-explain en">Complete your story with GYEOL</p>
+                <p class="result-explain-kr serif-ko">완성된 향을 확인한 후 주문을 진행해주세요.</p>
+            </div>
+            <img src="Desktop/perfume.png" alt="향수 완성">
+        </section>
+        <section id="desktop-perfume-data">
+            <div class="desktop-perfume-data-inner">
+                <div class="scent-details-title">
+                    <p class="en">SCENT DETAILS</p>
+                    <h2 class="serif-ko">선택한 정보를 확인해주세요.</h2>
+                </div>
+                <div class="desktop-scent-info">
+                    <p class="scent-label en">FRAGRANCE</p>
+                    <p id="result-name" class="serif-ko"></p>
+                    <p class="scent-label en">TOP NOTE</p>
+                    <p id="result-top" class="en"></p>
+                    <p class="scent-label en">MIDDLE NOTE</p>
+                    <p id="result-middle" class="en"></p>
+                    <p class="scent-label en">BASE NOTE</p>
+                    <p id="result-base" class="en"></p>
+                    <p class="scent-label serif-ko">요청사항</p>
+                    <p id="result-request" class="serif-ko en"></p>
+                </div>
+            </div>
+        </section>
+        <section id="perfume-data">
+            <div class="perfume-card">
+                <h2>
+                    <img src="Mobile/source/typo_black.png" alt="GYEOL">
+                </h2>
+                <div class="perfume-card-info">
+                    <div class="card-name">
+                        <p class="en">FRAGRANCE NAME.</p>
+                        <p id="mobile-result-name" class="serif-ko"></p>
+                    </div>
+                    <div class="card-notes">
+                        <p class="en">MAIN NOTES.</p>
+                        <p>
+                            <span id="mobile-result-top" class="en"></span> ·
+                            <span id="mobile-result-middle" class="en"></span> ·
+                            <span id="mobile-result-base" class="en"></span>
+                        </p>
+                    </div>
+                    <div class="card-date">
+                        <p class="en">DATE.</p>
+                        <p id="result-date" class="en"></p>
+                    </div>
+                </div>
+                <p class="card-message en">
+                    Complete your story with GYEOL.
+                    <img src="Mobile/source/label_logo.png" alt="">
+                </p>
+            </div>
+        </section>
+        <div class="result-actions">
+            <p class="result-notice">
+                <img src="Mobile/source/notice.svg" alt="공지">
+                주문 제작 상품으로, 제작 기간은 영업일 기준 3-5일 소요됩니다.
+            </p>
+            <div class="result-click">
+                <a href="gyeol-product-page.html">
+                    수정하기
+                </a>
+                <a href="#" id="add-cart">장바구니 담기</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-copy">
+                <img src="logo_mockup/logo_design/logo/label_4c381e.png" alt="gyeol">
+                <p>Copyright © <span>GYEOL</span> All rights reserved</p>
+                <p>Seoul, South Korea</p>
+            </div>
+            <div class="footer-menu">
+                <p class="en">
+                    <a href="gyeol-brand-story.html">BRAND STORY</a>
+                </p>
+                <p class="en">
+                    <a href="#">SITE MAP</a>
+                </p>
+                <div class="footer-sns">
+                    <p class="en">FOLLOW US</p>
+                    <a href="#">
+                        <img src="Mobile/source/instagram.png" alt="인스타그램">
+                    </a>
+                    <a href="#">
+                        <img src="Mobile/source/kakaotalk.png" alt="카카오톡">
+                    </a>
+                </div>
+            </div>
+            <p class="line-h"></p>
+            <div class="footer-contact">
+                <ul>
+                    <li><a href="#">서비스 이용약관</a></li>
+                    <li class="privacy"><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용안내</a></li>
+                </ul>
+                <p>고객센터 1234-1234</p>
+                <p>상담가능 시간: 09:00 - 18:00
+                    <span>(주말, 공휴일 휴무)</span>
+                </p>
+                <p>마케팅 문의: gyeol@gyeol.kr</p>
+            </div>
+            
+        </div>
+        <div class="tablet-copy">
+                <p>Copyright © <span>GYEOL</span> All rights reserved</p>
+                <p>Seoul, South Korea</p>
+        </div>
+    </footer>
+    <div id="mobile-menu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-top en">
+                <p><a href="#">Login</a> | <a href="#">Help</a></p>
+                <button type="button" id="close-btn">
+                    <img src="Tablet/X.svg" alt="닫기">
+                </button>
+            </div>
+            <nav>
+                <ul class="en">
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#">BEST</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">CUSTOM</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="gyeol.js"></script>   
+</body>
+</html>
