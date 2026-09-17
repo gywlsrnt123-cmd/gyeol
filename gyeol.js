@@ -197,7 +197,9 @@ if (requestInput && requestCount) {
 let customForm = document.querySelector('#custom-question');
 
 if (customForm) {
-    customForm.addEventListener('submit', function () {
+    customForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
         let perfumeName = document.querySelector('#per-name').value;
         let topNote = document.querySelector('input[name="top-note"]:checked')?.value;
         let middleNote = document.querySelector('input[name="middle-note"]:checked')?.value;
@@ -209,6 +211,8 @@ if (customForm) {
         sessionStorage.setItem('middleNote', middleNote);
         sessionStorage.setItem('baseNote', baseNote);
         sessionStorage.setItem('request', request);
+
+        window.location.href = 'gyeol-result-page.html';
     });
 }
 
